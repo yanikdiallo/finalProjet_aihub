@@ -297,7 +297,7 @@ def get_agent():
     llm = ChatGroq(
         model="llama-3.3-70b-versatile", 
         temperature=0,
-        groq_api_key="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" # Ou configurée en variable d'environnement
+        groq_api_key = st.secrets.get("GROQ_API_KEY") or os.getenv("GROQ_API_KEY") # Ou configurée en variable d'environnement
     )
     
     
