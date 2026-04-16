@@ -14,7 +14,7 @@ from bs4 import BeautifulSoup as bs
 from scipy.stats.mstats import winsorize
 from sklearn.linear_model import LinearRegression
 from typing import TypedDict, Annotated, List, Optional
-
+from langchain_groq import ChatGroq
 from langchain_core.tools import tool
 from langchain_core.messages import HumanMessage
 from langchain_ollama import ChatOllama
@@ -297,7 +297,7 @@ def get_agent():
     llm = ChatGroq(
         model="llama-3.3-70b-versatile", 
         temperature=0,
-        groq_api_key="VOTRE_CLE_API_GROQ" # Ou configurée en variable d'environnement
+        groq_api_key="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" # Ou configurée en variable d'environnement
     )
     
     
